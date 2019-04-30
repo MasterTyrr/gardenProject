@@ -1,13 +1,16 @@
 <mat-toolbar class= "Nav-Bar">
-<button class="nav-btn">About</button>
-<button class="nav-btn">Products</button>
+    <a href="http://localhost:4200/about">
+<button class="nav-btn" routerlink="/about">About</button></a>
+<a href="http://localhost:4200/products">
+<button class="nav-btn" routerlink= "/products">Products</button></a>
 <span class ="Fill-Remaining-Space"></span>
-<img width="55" alt="Eden Logo" src="../../../assets/LogoClear.png">
+<a href="http://localhost:4200/home">
+<img width="55" alt="Eden Logo" routerlink="../home" src="../../../assets/LogoClear.png"></a>
 <span class ="Fill-Remaining-Space"></span>
 <button class="nav-btn">Register</button>
 <button class="nav-btn" routerLink="../login" >Login</button>
 </mat-toolbar>
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
 <!-- <app-message>
     <router-outlet></router-outlet>
 </app-message> -->
