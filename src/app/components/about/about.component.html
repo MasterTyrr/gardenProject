@@ -1,3 +1,4 @@
+<app-header></app-header>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,22 +31,19 @@
 </style>
 
 <body>
-    <div style="text-align: center">
-    <img class="logo" src="/src/assets/Logo.PNG" />
-    </div>
     <br />
     <div class="container col-8">
         <div class="jumbotron">
                 <hr class="my-4">
         <h1 class="display-4" style="text-align: center"><b>Welcome</b></h1>
-        <img src="/src/assets/roger.jpg" class="float-left mr-2 rounded" id="roger" />
+        <img src="../../../assets/roger.jpg" class="float-left mr-2 rounded" id="roger" />
             <p class="about">Welcome to Eden. We were founded in 1981 by Roger, the shrubber. We take great pride in our plants and our service. We are all well known for our shrubberies.</p>
             <hr class="my-4">
             <br>
             <h1 class="display-4" style="text-align: center"><b>Reviews</b></h1>
             <div class="card">
                     <div class="card-body">
-                        <img src="/src/assets/knights.jpg" class="float-left mr-2 rounded reviewimg">
+                        <img src="../../../assets/knights.jpg" class="float-left mr-2 rounded reviewimg">
                         <p class="review">
                         <i>Knights Who Say Ni (ni@ni.com), 10/31/2014</i>
                         </p>
@@ -55,14 +53,42 @@
             <br>
             <div class="card">
               <div class="card-body">
-                <img src="/src/assets/arthur.jpg" class="float-left mr-2 rounded reviewimg">
+                <img src="../../../assets/arthur.jpg" class="float-left mr-2 rounded reviewimg">
                 <p class="review">
                   <i>King Arthur (arthur@camelot.org), 10/20/2014</i>
                 </p>
                 In an attempt to gain passage through the woods, we were sent on a quest to purchase a shrubbery. Fortunately, we ran into Roger the Shrubber, who dealt in shrubbery. He sold us a Lilac shrubbery at a great price. The people we gave it to liked it so much they demanded another one.
               </div>
             </div>
-            <h6 style="text-align: right"><a href="#">See more reviews...</a></h4>
+            <h6 style="text-align: right"><a href="#">See more reviews...</a></h6>
+            <hr>
+            <form action="https://formspree.io/email@domain.tld" method="POST">
+                <div class="form-group">
+                  <label for="exampleInputName">Your Name?</label>
+                  <input type="name" name="name" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Name">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail">Email?</label>
+                  <input type="email" name="email" class="form-control" id="exampleInputEmail" placeholder="Email">
+                </div>
+                <div class="form-group">
+                        <label for="exampleInputLocation">City & State?</label>
+                        <input type="location" name="location" class="form-control" id="exampleInputLocation" placeholder="Location">
+                </div>
+                <div class="text-area">
+                    <label for="InputMessage">Message?</label>
+                        <input type="message" name="message" class="form-control" id="exampleInputMessage" placeholder="Message...">
+                </div>
+                <br>
+                <div class="form-check has-success">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" id="checkboxSuccess" value="option1">
+                      Sign up for Eden's newsletter!
+                    </label>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
         </div>
     </div>
 
