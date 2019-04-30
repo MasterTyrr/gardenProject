@@ -1,0 +1,21 @@
+.Fill-Remaining-Space{
+    flex: auto;
+}
+.Nav-Bar{
+    background-color: rgb(245, 245, 245);
+    position: fixed;
+    margin-top: -1vh;
+    /* opacity: 0.5; */
+}
+.nav-btn {
+    border: none;
+    font-size: 30px;
+    margin-right: 0.5em;
+    background: transparent;
+    /* opacity: 1; */
+}
+.example-fill-remaining-space {
+    flex: 1 1 auto;
+}
+
+

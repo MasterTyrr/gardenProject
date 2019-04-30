@@ -1,0 +1,32 @@
+.background_image{
+    background-image: url(../assets/Shrubberies.jpg);
+    background-size: 135%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding-top: 2vh;
+}
+.header{
+    background-color: whitesmoke;
+    width:10vw;
+    margin: 5.5vh auto;
+    margin-bottom: 2vh;
+}
+.front_Image{
+    background-color: whitesmoke;
+    margin: 2vh auto;
+    width: 20vw;
+    height: 30vh;
+}
+.text_Box{
+    background-color: whitesmoke;
+    margin: 5.5vh auto;
+    width: 85vw;
+    height: 35vh;
+}
+#box_Header{
+    font-size: 50px;
+    padding-top: 2vh;
+}
+#box_Body{
+    font-size:35px;
+}
