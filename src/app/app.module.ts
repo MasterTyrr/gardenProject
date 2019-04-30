@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -22,34 +22,32 @@ import { ProductsService } from './services/products.service';
 import { ProductIndexComponent } from './components/product/product-index/product-index.component';
 import { ProductDetailComponent } from './components/product/product-detail/product-detail.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
+import { AboutComponent } from './components/about/about.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes = [
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent},
+  { path: 'about', component: AboutComponent},
   { path: 'login', component: LoginComponent },
-  { path: 'products', children: [
-  { path: '', component: ProductIndexComponent },
+  { path: 'products', component: ProductIndexComponent },
   { path: 'detail/:id', component: ProductDetailComponent },
   { path: 'delete/:id', component: ProductDeleteComponent }
-  ]
-}
 ];
-import { AboutComponent } from './about/about.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MatToolbarModule
     HeaderComponent,
     LoginComponent,
     ProductIndexComponent,
     ProductDetailComponent,
-    ProductDeleteComponent
-    AboutComponent
+    ProductDeleteComponent,
+    AboutComponent,
+    HomeComponent
   ],
+
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -63,6 +61,7 @@ import { AboutComponent } from './about/about.component';
     MatInputModule,
     MatTableModule,
     AppRoutingModule
+
   ],
   providers: [
     AuthService,
@@ -71,3 +70,4 @@ import { AboutComponent } from './about/about.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
