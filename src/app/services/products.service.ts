@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-const ApiUrl = 'https://efa-gardenapp-backend.herokuapp.com/api'
+const ApiUrl = 'https://efa-gardenapp-backend.herokuapp.com/api/'
 
 
 @Injectable()
@@ -11,15 +11,15 @@ export class ProductsService {
 
   getProduct(id: string) {
 
-    return this._http.get(`${ApiUrl}products/${id}`, { headers: this.getHeaders() });
+    return this._http.get(`${ApiUrl}product/${id}`, { headers: this.getHeaders() });
   }
 
   getProducts() {
-    return this._http.get(`${ApiUrl}products`, { headers: this.getHeaders() });
+    return this._http.get(`${ApiUrl}product`, { headers: this.getHeaders() });
   }
 
   deleteProduct(id: number) {
-    return this._http.delete(`${ApiUrl}products/${id}`, { headers: this.getHeaders() });
+    return this._http.delete(`${ApiUrl}product/${id}`, { headers: this.getHeaders() });
 
   }
   private getHeaders() {
