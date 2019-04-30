@@ -30,6 +30,7 @@ const routes = [
   ]
 }
 ];
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ const routes = [
     ProductIndexComponent,
     ProductDetailComponent,
     ProductDeleteComponent
+    AboutComponent
   ],
   imports: [
     BrowserModule,
