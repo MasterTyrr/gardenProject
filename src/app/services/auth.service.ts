@@ -4,7 +4,7 @@ import { Token } from '../models/Token';
 import { Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
 
-const Api_Url = 'https://efa-gardenapp-backend.herokuapp.com/api/auth/login'
+const Api_Url = 'https://efa-gardenapp-backend.herokuapp.com/api/auth'
 
 
 @Injectable()
@@ -16,7 +16,7 @@ export class AuthService {
   
   login(loginInfo) {
     const str = `grant_type=password&email=${encodeURI(loginInfo.email)}&password=${encodeURI(loginInfo.password)}`;
-    return this._http.post(`${Api_Url}/Token`, str).subscribe( (token: Token) => {
+    return this._http.post(`${Api_Url}/login/Token`, str).subscribe( (token: Token) => {
       this.userInfo = token;
       localStorage.setItem('id_token', token.access_token);
       this.isLoggedIn.next(true);

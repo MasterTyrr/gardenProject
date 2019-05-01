@@ -42,12 +42,12 @@ import { AboutComponent } from './about/about.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatToolbarModule
+    MatToolbarModule,
     HeaderComponent,
     LoginComponent,
     ProductIndexComponent,
     ProductDetailComponent,
-    ProductDeleteComponent
+    ProductDeleteComponent,
     AboutComponent
   ],
   imports: [
